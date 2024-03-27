@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive sidebar</title>
+<!-- font font-awesome cdn link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- boxicon icons  -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- link sstyle css  -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="sidebar close">
+        <!-- logo ---- --->
+        <a href="#" class="logo-box">
+            <i class="fa-brands fa-xing"></i> <!----xing rotate---->
+            <div class="logo-name">your logo</div>
+        </a>
+        <!-- list ---- --->
+
+<ul class="sidebar-list">
+        <!---- non dropdown list item ------->
+        <li>
+            <div class="tittle">
+<a href="#" class="link">
+    <i class="fa-solid fa-grip"></i><!-----grid------->
+    <span class="name">deshboard</span>
+</a>
+<!-- <i class="fa-solid fa-chevron-down"></i> -->
+</div>
+<div class="submenu">
+    <a href="#" class="link submenu-tittle">dashboard</a>
+<!-- submenu links here  -->
+</div>
+
+        </li>
+
+
+           <!---- non dropdown list item ------->
+           <li class="dropdown ">
+            <div class="tittle">
+<a href="#" class="link">
+    <i class="fa-solid fa-layer-group"></i><!-----collection------->
+    <span class="name">category</span>
+</a>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="submenu">
+    <a href="#" class="link submenu-tittle">category</a>
+<a href="#" class="link">HTML</a>
+<a href="#" class="link">CSS</a>
+<a href="#" class="link">javascript</a>
+<a href="#" class="link">PHP</a>
+<a href="#" class="link">MY SQL </a>
+
+</div>
+
+        </li>
+
+                   <!---- non dropdown list item ------->
+                   <li class="dropdown ">
+                    <div class="tittle">
+        <a href="#" class="link">
+            <i class="fa-solid fa-book"></i>    <!-----book------->
+            <span class="name">posts</span>
+        </a>
+        <i class="fa-solid fa-chevron-down"></i>  
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-tittle">posts</a>
+        <a href="#" class="link">web design</a>
+        <a href="#" class="link">card design</a>
+        <a href="#" class="link">login form</a>
+        </div>
+                </li>
+                <!-- non dropdown list item  -->
+                <li>
+                    <div class="tittle">
+        <a href="#" class="link">
+            <i class="fa-solid fa-chart-line"></i>     <!-----chart------->
+            <span class="name">analytics</span>
+        </a>
+        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-tittle">analytics</a>
+        <!-- submenu links here  -->
+        </div>
+                </li>
+
+                <!-- non dropdown list item  -->
+                <li>
+                    <div class="tittle">
+        <a href="#" class="link">
+            <i class="fa-solid fa-chart-pie"></i>    <!----chart------->
+            <span class="name">chart</span>
+        </a>
+        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-tittle">chart</a>
+        <!-- submenu links here  -->
+        </div>
+                </li>
+                 <!---- non dropdown list item ------->
+                 <li class="dropdown ">
+                    <div class="tittle">
+        <a href="#" class="link">
+            <i class="fa-solid fa-bomb"></i>   <!-----estension------->
+            <span class="name">plugins</span> 
+        </a>
+        <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-tittle">plugins</a>
+        <a href="#" class="link">ui face</a>
+        <a href="#" class="link">pigments</a>
+        <a href="#" class="link">box icons</a>
+        </div>
+                </li>
+
+                    <!-- non dropdown list item  -->
+                    <li>
+                        <div class="tittle">
+            <a href="#" class="link">
+                <i class="fa-regular fa-compass"></i><!-----compa------->
+                <span class="name">explore</span>
+            </a>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </div>
+            <div class="submenu">
+                <a href="#" class="link submenu-tittle">explore</a>
+            <!-- submenu links here  -->
+            </div>
+                    </li>
+
+                       <!-- non dropdown list item  -->
+                       <li>
+                        <div class="tittle">
+            <a href="#" class="link">
+                <i class="fa-solid fa-clock-rotate-left"></i><!-----history------->
+                <span class="name">history</span>
+            </a>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </div>
+            <div class="submenu">
+                <a href="#" class="link submenu-tittle">history</a>
+            <!-- submenu links here  -->
+            </div>
+                    </li>
+
+                       <!-- non dropdown list item  -->
+                       <li>
+                        <div class="tittle">
+            <a href="#" class="link">
+                <i class="fa-solid fa-gear"></i>     <!-----cog------>
+                <span class="name">settings</span>
+            </a>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </div>
+            <div class="submenu">
+                <a href="#" class="link submenu-tittle">settings</a>
+            <!-- submenu links here  -->
+            </div>
+                    </li>
+
+</ul>
+ </div>
+<!-- home section  -->
+<section class="home">
+    <div class="toggle-sidebar">
+        <i class="fa-solid fa-bars"></i>
+        <div class="text">toggle</div>
+    </div>
+</section>
+<script src="source.js"></script>
+</body>
+</html>

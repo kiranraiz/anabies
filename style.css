@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* global  variables */
+*{
+font-family: "Roboto Condensed", sans-serif;
+margin: 0;
+padding: 0;
+text-transform: capitalize;
+box-sizing: border-box;
+transition: all .3s linear;
+list-style: none;
+text-decoration: none;
+}
+/* root varibles  */
+:root{
+--black:rgb(40, 8, 105);
+--color-blue:#3f93f1;
+--color-dark1:#1e1e1e;
+--color-dark2:#252527;
+--color-light-1:#dfdfdf;
+}
+.sidebar{
+top: 0;
+left: 0;
+width: 260px;
+background-color: var(--color-dark1);
+height: 100vh;
+transition: all .5s ease;
+z-index:1000 ;
+position: absolute;
+}
+.sidebar.close{
+    width: 78px;
+}
+
+
+
+.logo-box{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-light-1);
+    transition: all .5s linear;
+}
+.logo-box:hover{
+    color: var(--color-blue);
+}
+.logo-box i{
+    font-size: 30px;
+    height: 50px;
+    min-width: 70px;
+    text-align: center;
+transition: all .5s ease;
+line-height: 50px;    
+}
+.sidebar.close .logo-box i{
+    transform: rotate(360deg);
+
+}
+
+.logo-name{
+    font-size: 22px;
+    font-weight: 600;
+
+}
+/* .sidebar list  */
+.sidebar-list{
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+.sidebar-list::-webkit-scrollbar{
+    display: none;
+}
+.sidebar-list li{
+    transition: all .5s ease;
+}
+.sidebar-list li:hover{
+    background-color: var(--color-dark1);
+}
+
+.sidebar-list li .tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.sidebar-list li.active.tittle{
+    background-color: var(--color-blue);
+}
+.sidebar-list li.active .fa-chevron-down{
+    transition: all .5s ease;
+    transform: rotate(180deg);
+}
+
+.sidebar-list li .tittle .link{
+    display: flex;
+align-items: center;
+}
+.sidebar-list li .tittle i{
+    height: 50px;
+    min-width: 72px;
+    text-align: center;
+    line-height: 50px;
+    color: var(--color-light-1);
+    font-size: 16px;
+}
+
+.sidebar-list li .tittle .name{
+
+font-size: 19px;
+font-weight: 400;
+color: var(--color-light-1);
+}
+
+/* submenu  */
+
+.sidebar-list li .submenu{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.sidebar-list li.dropdown.active .submenu{
+    width: unset;
+    height: unset;
+    opacity: 1;
+flex-direction: column;
+padding: 6px 6px 14px 80px;
+    display: flex;
+    background-color: var(--color-dark2);
+}
+.tittle:hover{
+    background-color: var(--color-blue);
+}
+
+.submenu .link{
+    color: var(--color-light-1);
+font-size: 15px;
+padding: 5px 0;
+transition: all .5s ease;
+}
+.submenu .link:hover{
+    color: var(--color-blue);
+}
+.submenu-tittle{
+    display: none;
+}
+/* submenu  close */
+.sidebar.close .logo-name,
+.sidebar.close .tittle .name,
+.sidebar.close .tittle .fa-chevron-down
+{
+    display: none;
+}
+.sidebar.close .sidebar-list{
+overflow: visible;
+}
+.sidebar.close .sidebar-list li{
+position: relative;
+}
+.sidebar.close .sidebar-list li .submenu{
+display: flex;
+flex-direction: column;
+position: absolute;
+left: 100%;
+top: -10px;
+margin-top: 0;
+border-radius: 0 6px 6px 0;
+padding: 10px 20px;
+height: max-content;
+width: max-content;
+opacity: 0;
+transition: all .3s linear;
+pointer-events: none;
+}
+.sidebar.close .sidebar-list li:hover .submenu{
+
+opacity: 1;
+top: 0;
+pointer-events: initial;
+background-color: var(--color-dark1);
+
+}
+.sidebar.close .submenu-tittle{
+    display: block;
+    font-style: 18px;
+    color: var(--color-light-1);
+}
+
+/* hom section  */
+.home{
+    position:relative;
+    background-color: var(--color-light-1);
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100vh;
+    transition: all .5s ease;
+}
+.sidebar.close ~ .home{
+    left: 78px;
+    width: calc(100% - 78px);
+
+}
+
+
+
+
+
+
+
+.home .toggle-sidebar{
+    height: 60px;
+    display: flex;
+align-items:center;
+width: fit-content;
+cursor: pointer;
+}
+.home .toggle-sidebar i{
+font-size: 35px;
+color: var(--color-dark1);
+margin-left: 10px;
+}
+.home .toggle-sidebar .text{
+font-size: 25px;
+color: var(--color-dark1);
+font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
